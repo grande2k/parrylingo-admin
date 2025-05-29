@@ -1,0 +1,76 @@
+@import "tailwindcss";
+@import "@nuxt/ui";
+
+@theme static {
+	/* Цвета */
+	--ui-border-accented: #d0d5dd;
+	--ui-text-dimmed: var(--color-graphite-300);
+	--ui-bg-elevated: var(--color-gray-300);
+
+	--color-black: #000;
+	--color-white: #fff;
+
+	--color-primary: #fd6a29;
+	--color-secondary: #9bb27a;
+	--color-blue: #3f80ff;
+	--color-bg-color: #f7f8fc;
+
+	--color-graphite-50: #eeefef;
+	--color-graphite-300: #8a8f93;
+	--color-graphite-400: #8a8f94;
+	--color-graphite-500: #5a5c5f;
+	--color-graphite-600: #2e3035;
+	--color-graphite-700: #242528;
+	--color-graphite-800: #1d1e20;
+	--color-graphite-900: #141414;
+
+	--color-red-50: #f5a7a9;
+	--color-red-300: #ff7479;
+	--color-red-500: #f54759;
+	--color-red-800: #dd2a2f;
+
+	--color-lemon-50: #fcefb9;
+	--color-lemon-300: #ffe300a3;
+	--color-lemon-500: #ffc400;
+	--color-lemon-800: #ffb700;
+
+	--color-yellow-50: #f5e2b3;
+	--color-yellow-300: #ffcb73d;
+	--color-yellow-500: #ffb523;
+	--color-yellow-800: #f08f35;
+
+	--color-green-50: #c7e8b1;
+	--color-green-300: #a6dc4ad;
+	--color-green-500: #50c768;
+	--color-green-800: #22b350;
+
+	/* Типографика */
+	--font-sans: "Inter", sans-serif;
+}
+
+html,
+body {
+	height: 100%;
+	width: 100%;
+	overflow: hidden;
+}
+
+body {
+	@apply font-sans;
+}
+
+.flex-center {
+	@apply flex items-center justify-center;
+}
+
+.auth-wrapper {
+	@apply bg-white rounded-xl drop-shadow-xl py-10 px-12 w-fit max-w-[450px];
+}
+
+.auth-wrapper__logo {
+	@apply mb-8 mx-auto;
+}
+
+.auth-wrapper__title {
+	@apply text-3xl text-graphite-800 text-center mb-8 font-semibold;
+}
