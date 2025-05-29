@@ -1,6 +1,6 @@
 <template>
 	<div>
-		<NewsTable />
+		<LessonsTable />
 	</div>
 </template>
 
@@ -8,6 +8,6 @@
 definePageMeta({
 	middleware: "auth",
 	requiresAuth: true,
-	title: "Новости",
+	title: "Уроки",
 });
 </script>
