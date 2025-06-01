@@ -42,14 +42,8 @@ const columns = [
 	},
 	{ header: "Язык", cell: ({ row }) => row.original.language.name },
 	{
+		accessorKey: "user.name",
 		header: "Автор",
-		cell: ({ row }) => {
-			if (row.original.user) {
-				return `${row.original.user.first_name} ${row.original.user.last_name}`;
-			} else {
-				return "-";
-			}
-		},
 	},
 	{
 		header: "Слова",
