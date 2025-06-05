@@ -12,6 +12,14 @@ export async function useAPI<T>(endpoint: string | (() => string), options?: Use
 		options.body = structuredClone(toRaw(options.body));
 	}
 
+	if (options?.query) {
+		const rawQuery = isReactive(options.query) ? toRaw(options.query) : options.query;
+		const filteredQuery = Object.fromEntries(
+			Object.entries(rawQuery).filter(([, v]) => v !== null && v !== undefined)
+		);
+		options.query = filteredQuery;
+	}
+
 	return useFetch(fullUrl, {
 		...options,
 		server: false,

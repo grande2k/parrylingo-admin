@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
+@import "../../../node_modules/flag-icons/css/flag-icons.min.css";
 
 @theme static {
 	/* Цвета */
