@@ -73,6 +73,15 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Уроки не найдены" name="interface.no_lessons">
+						<UInput
+							v-model="state.interface.no_lessons"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Избранное" name="interface.favourites">
 						<UInput
 							v-model="state.interface.favourites"
@@ -85,6 +94,24 @@
 					<UFormField label="Язык для обучения" name="interface.language_to_learn">
 						<UInput
 							v-model="state.interface.language_to_learn"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Выберите язык" name="interface.select_language">
+						<UInput
+							v-model="state.interface.select_language"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Кнопка старт" name="interface.start">
+						<UInput
+							v-model="state.interface.start"
 							size="2xl"
 							placeholder="Введите значение"
 							class="w-full"
@@ -227,8 +254,11 @@ const state = reactive({
 	interface: {
 		lessons: "",
 		old_lessons: "",
+		no_lessons: "",
 		favourites: "",
 		language_to_learn: "",
+		select_language: "",
+		start: "",
 		interface_sounds: "",
 		word_sounds: "",
 		interface_languages: "",
@@ -275,7 +305,7 @@ const onSubmit = async () => {
 		} else {
 			const id = route.params.lang_code;
 			await api(`/admin/interface/${id}`, { method: "PATCH", body: state });
-			toast.add({ title: "Обновлено", description: "Новость успешно обновлена", color: "success" });
+			toast.add({ title: "Обновлено", description: "Язык интерфейса был успешно обновлен", color: "success" });
 		}
 		emit("update");
 	} catch (err) {
