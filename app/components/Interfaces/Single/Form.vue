@@ -274,7 +274,7 @@ const onSubmit = async () => {
 			toast.add({ title: "Создано", description: "Язык интерфейса был успешно создан", color: "success" });
 		} else {
 			const id = route.params.lang_code;
-			await api(`/news/update/${id}`, { method: "PATCH", body: state });
+			await api(`/admin/interface/${id}`, { method: "PATCH", body: state });
 			toast.add({ title: "Обновлено", description: "Новость успешно обновлена", color: "success" });
 		}
 		emit("update");
