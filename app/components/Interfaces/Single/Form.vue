@@ -146,8 +146,9 @@
 					</UFormField>
 
 					<UFormField label="Нижний текст" name="interface.footer_text">
-						<UInput
+						<UTextarea
 							v-model="state.interface.footer_text"
+							autoresize
 							size="2xl"
 							placeholder="Введите значение"
 							class="w-full"
