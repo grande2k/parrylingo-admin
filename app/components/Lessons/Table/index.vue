@@ -27,6 +27,7 @@
 </template>
 
 <script setup>
+const toast = useToast();
 const lessons = ref(null);
 const filters = ref({ page_index: 1, page_size: 10 });
 const loading = ref(true);
@@ -48,7 +49,16 @@ const columns = [
 	{
 		header: "Слова",
 		cell: ({ row }) => {
-			return row.original.words.map(word => word.title).join(", ");
+			return row.original.words.map(word => word.titles.ru.trim()).join(", ");
+		},
+	},
+	{
+		header: "Картинки",
+		cell: ({ row }) => {
+			return h("div", { class: "flex gap-2" }, [
+				h("img", { src: getStaticUrl(row.original.words[0].image), class: "size-12 drop-shadow rounded" }),
+				h("img", { src: getStaticUrl(row.original.words[1].image), class: "size-12 drop-shadow rounded" }),
+			]);
 		},
 	},
 	{

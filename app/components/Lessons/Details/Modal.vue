@@ -6,7 +6,7 @@
 					<div class="border-4 border-gray-300 rounded-2xl flex-center p-4">
 						<img :src="getStaticUrl(word.image)" class="size-42 object-contain object-center" alt="" />
 					</div>
-					<p class="text-center mt-2 font-semibold">{{ word.title }}</p>
+					<p class="text-center mt-2 font-semibold">{{ word.titles.ru }}</p>
 				</div>
 			</div>
 		</template>

@@ -136,6 +136,15 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Написание слова" name="interface.word_visibility">
+						<UInput
+							v-model="state.interface.word_visibility"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Язык интерфейса" name="interface.interface_languages">
 						<UInput
 							v-model="state.interface.interface_languages"
@@ -262,6 +271,7 @@ const state = reactive({
 		start: "",
 		interface_sounds: "",
 		word_sounds: "",
+		word_visibility: "",
 		interface_languages: "",
 		footer_text: "",
 		copy_success: "",
