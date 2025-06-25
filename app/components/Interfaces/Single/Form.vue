@@ -55,6 +55,33 @@
 				</template>
 
 				<div class="space-y-4">
+					<UFormField label="Мета:title" name="interface.meta_title">
+						<UInput
+							v-model="state.interface.meta_title"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Мета:description" name="interface.meta_description">
+						<UInput
+							v-model="state.interface.meta_description"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Мета:keywords" name="interface.meta_keywords">
+						<UInput
+							v-model="state.interface.meta_keywords"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Уроки" name="interface.lessons">
 						<UInput
 							v-model="state.interface.lessons"
@@ -262,6 +289,9 @@ const state = reactive({
 	language_code: "",
 	flag_code: "",
 	interface: {
+		meta_title: "",
+		meta_description: "",
+		meta_keywords: "",
 		lessons: "",
 		old_lessons: "",
 		no_lessons: "",
