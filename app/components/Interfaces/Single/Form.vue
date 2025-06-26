@@ -181,10 +181,38 @@
 						/>
 					</UFormField>
 
-					<UFormField label="Нижний текст" name="interface.footer_text">
+					<UFormField label="Заголовок текста" name="interface.footer_title">
+						<UTextarea
+							v-model="state.interface.footer_title"
+							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Текст" name="interface.footer_text">
 						<UTextarea
 							v-model="state.interface.footer_text"
 							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Текст кнопки Appstore" name="interface.appstore_button">
+						<UInput
+							v-model="state.interface.appstore_button"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Поиск Appstore" name="interface.appstore_search">
+						<UInput
+							v-model="state.interface.appstore_search"
 							size="2xl"
 							placeholder="Введите значение"
 							class="w-full"
@@ -203,15 +231,6 @@
 					<UFormField label="Ошибка копирования" name="interface.copy_error">
 						<UInput
 							v-model="state.interface.copy_error"
-							size="2xl"
-							placeholder="Введите значение"
-							class="w-full"
-						/>
-					</UFormField>
-
-					<UFormField label="Поиск Appstore" name="interface.appstore_search">
-						<UInput
-							v-model="state.interface.appstore_search"
 							size="2xl"
 							placeholder="Введите значение"
 							class="w-full"
@@ -303,10 +322,12 @@ const state = reactive({
 		word_sounds: "",
 		word_visibility: "",
 		interface_languages: "",
+		footer_title: "",
 		footer_text: "",
+		appstore_button: "",
+		appstore_search: "",
 		copy_success: "",
 		copy_error: "",
-		appstore_search: "",
 	},
 });
 
