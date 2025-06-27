@@ -201,6 +201,24 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Показать больше" name="interface.show_more">
+						<UInput
+							v-model="state.interface.show_more"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Показать меньше" name="interface.show_less">
+						<UInput
+							v-model="state.interface.show_less"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Текст кнопки Appstore" name="interface.appstore_button">
 						<UInput
 							v-model="state.interface.appstore_button"
@@ -324,6 +342,8 @@ const state = reactive({
 		interface_languages: "",
 		footer_title: "",
 		footer_text: "",
+		show_more: "",
+		show_less: "",
 		appstore_button: "",
 		appstore_search: "",
 		copy_success: "",
