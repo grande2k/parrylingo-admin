@@ -40,5 +40,11 @@ const items = computed(() => [
 		to: "/interfaces",
 		active: route.path.startsWith("/interfaces"),
 	},
+	{
+		label: "Аватарки",
+		icon: "i-lucide-image",
+		to: "/avatars",
+		active: route.path.startsWith("/avatars"),
+	},
 ]);
 </script>
