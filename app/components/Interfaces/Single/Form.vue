@@ -254,6 +254,162 @@
 							class="w-full"
 						/>
 					</UFormField>
+
+					<UFormField label="Предложение войти или зарегистрироваться" name="interface.auth_text">
+						<UInput
+							v-model="state.interface.auth_text"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Войти" name="interface.sign_in">
+						<UInput
+							v-model="state.interface.sign_in"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Зарегистрироваться" name="interface.sign_up">
+						<UInput
+							v-model="state.interface.sign_up"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Выйти" name="interface.log_out">
+						<UInput
+							v-model="state.interface.log_out"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сохранить" name="interface.save">
+						<UInput
+							v-model="state.interface.save"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Отменить" name="interface.cancel">
+						<UInput
+							v-model="state.interface.cancel"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Email" name="interface.email">
+						<UInput
+							v-model="state.interface.email"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Имя" name="interface.name">
+						<UInput
+							v-model="state.interface.name"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Пароль" name="interface.password">
+						<UInput
+							v-model="state.interface.password"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Повторите пароль" name="interface.repeat_password">
+						<UInput
+							v-model="state.interface.repeat_password"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Пароли не совпадают" name="interface.passwords_dont_match">
+						<UInput
+							v-model="state.interface.passwords_dont_match"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Заполните все поля" name="interface.fill_all_fields">
+						<UInput
+							v-model="state.interface.fill_all_fields"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Пользователь не найден" name="interface.user_not_found">
+						<UInput
+							v-model="state.interface.user_not_found"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Неправильный логин или пароль" name="interface.incorect_password">
+						<UInput
+							v-model="state.interface.incorect_password"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сообщение об успешном входе" name="interface.login_success">
+						<UInput
+							v-model="state.interface.login_success"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сообщение об успешной регистрации" name="interface.signup_success">
+						<UInput
+							v-model="state.interface.signup_success"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField
+						label="Сообщение об успешном обновлении профиля"
+						name="interface.update_profile_success"
+					>
+						<UInput
+							v-model="state.interface.update_profile_success"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
 				</div>
 			</UCard>
 		</div>
@@ -348,6 +504,23 @@ const state = reactive({
 		appstore_search: "",
 		copy_success: "",
 		copy_error: "",
+		auth_text: "Login or signup to see your points",
+		sign_in: "Sign in",
+		sign_up: "Sign up",
+		log_out: "Log out",
+		save: "Save",
+		update_profile_success: "Profile updated",
+		cancel: "Cancel",
+		email: "Email",
+		name: "Name",
+		password: "Password",
+		repeat_password: "Repeat password",
+		passwords_dont_match: "Passwords don't match",
+		fill_all_fields: "Fill all fields",
+		user_not_found: "User not found",
+		incorect_password: "Incorrect email or password",
+		login_success: "Successfully logged in",
+		signup_success: "Successfully signed up",
 	},
 });
 
