@@ -109,6 +109,15 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Авторы" name="interface.authors">
+						<UInput
+							v-model="state.interface.authors"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Избранное" name="interface.favourites">
 						<UInput
 							v-model="state.interface.favourites"
@@ -121,6 +130,33 @@
 					<UFormField label="Язык для обучения" name="interface.language_to_learn">
 						<UInput
 							v-model="state.interface.language_to_learn"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сортировка по" name="interface.sort_by">
+						<UInput
+							v-model="state.interface.sort_by"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сортировка по: дате" name="interface.sort_by_date">
+						<UInput
+							v-model="state.interface.sort_by_date"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Сортировка по: имени" name="interface.sort_by_name">
+						<UInput
+							v-model="state.interface.sort_by_name"
 							size="2xl"
 							placeholder="Введите значение"
 							class="w-full"
@@ -486,10 +522,14 @@ const state = reactive({
 		meta_description: "",
 		meta_keywords: "",
 		lessons: "",
+		authors: "",
 		old_lessons: "",
 		no_lessons: "",
 		favourites: "",
 		language_to_learn: "",
+		sort_by: "",
+		sort_by_date: "",
+		sort_by_name: "",
 		select_language: "",
 		start: "",
 		interface_sounds: "",
