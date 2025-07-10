@@ -34,6 +34,7 @@ const collapsed = computed(() => mainStore.sidebar_collapsed);
 
 const items = computed(() => [
 	{ label: "Уроки", icon: "i-lucide-play", to: "/lessons", active: route.path.startsWith("/lessons") },
+	{ label: "Пользователи", icon: "i-lucide-users", to: "/users", active: route.path.startsWith("/users") },
 	{
 		label: "Языки интерфейса",
 		icon: "i-lucide-languages",
