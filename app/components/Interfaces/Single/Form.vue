@@ -208,6 +208,24 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Таймер урока" name="interface.timer">
+						<UInput
+							v-model="state.interface.timer"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Поиск" name="interface.search">
+						<UInput
+							v-model="state.interface.search"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Язык интерфейса" name="interface.interface_languages">
 						<UInput
 							v-model="state.interface.interface_languages"
@@ -535,6 +553,8 @@ const state = reactive({
 		interface_sounds: "",
 		word_sounds: "",
 		word_visibility: "",
+		timer: "",
+		search: "",
 		interface_languages: "",
 		footer_title: "",
 		footer_text: "",
