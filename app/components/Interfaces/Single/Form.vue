@@ -127,6 +127,15 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Лидерборды" name="interface.leaderboard">
+						<UInput
+							v-model="state.interface.leaderboard"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Язык для обучения" name="interface.language_to_learn">
 						<UInput
 							v-model="state.interface.language_to_learn"
@@ -544,6 +553,7 @@ const state = reactive({
 		old_lessons: "",
 		no_lessons: "",
 		favourites: "",
+		leaderboard: "",
 		language_to_learn: "",
 		sort_by: "",
 		sort_by_date: "",
