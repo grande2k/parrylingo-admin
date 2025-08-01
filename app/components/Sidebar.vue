@@ -42,6 +42,12 @@ const items = computed(() => [
 		active: route.path.startsWith("/interfaces"),
 	},
 	{
+		label: "Категории",
+		icon: "i-lucide-logs",
+		to: "/categories",
+		active: route.path.startsWith("/categories"),
+	},
+	{
 		label: "Аватарки",
 		icon: "i-lucide-image",
 		to: "/avatars",

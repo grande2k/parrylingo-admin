@@ -181,6 +181,33 @@
 						/>
 					</UFormField>
 
+					<UFormField label="Категории" name="interface.categories">
+						<UInput
+							v-model="state.interface.categories"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Все (когда выбранны все категории)" name="interface.all">
+						<UInput
+							v-model="state.interface.all"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Выберите" name="interface.select">
+						<UInput
+							v-model="state.interface.select"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
 					<UFormField label="Кнопка старт" name="interface.start">
 						<UInput
 							v-model="state.interface.start"
@@ -559,6 +586,9 @@ const state = reactive({
 		sort_by_date: "",
 		sort_by_name: "",
 		select_language: "",
+		categories: "",
+		all: "",
+		select: "",
 		start: "",
 		interface_sounds: "",
 		word_sounds: "",

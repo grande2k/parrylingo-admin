@@ -24,6 +24,13 @@
 		@close="selectedLesson = null"
 		@refetch="fetchLessons"
 	/>
+
+	<LessonsEdit
+		v-model:open="editModalOpen"
+		:is-open="editModalOpen"
+		:lesson="selectedLesson"
+		@refetch="fetchLessons"
+	/>
 </template>
 
 <script setup>
@@ -32,16 +39,17 @@ const lessons = ref(null);
 const filters = ref({ page_index: 1, page_size: 10 });
 const loading = ref(true);
 const detailModalOpen = ref(false);
+const editModalOpen = ref(false);
 const selectedLesson = ref(null);
 
 const UBadge = resolveComponent("UBadge");
+const UButton = resolveComponent("UButton");
 
 const columns = [
 	{
 		header: "#",
 		cell: ({ row }) => (filters.value.page_index - 1) * filters.value.page_size + row.index + 1,
 	},
-	{ header: "Язык", cell: ({ row }) => row.original.language.name },
 	{
 		accessorKey: "user.name",
 		header: "Автор",
@@ -50,6 +58,13 @@ const columns = [
 		header: "Слова",
 		cell: ({ row }) => {
 			return row.original.words.map(word => word.titles.ru.trim()).join(", ");
+		},
+	},
+	{
+		header: "Категория",
+		cell: ({ row }) => {
+			if (!row.original.topic) return "";
+			return row.original.topic.names?.ru ?? row.original.topic.names?.en ?? row.original.topic.names[0] ?? "";
 		},
 	},
 	{
@@ -69,6 +84,26 @@ const columns = [
 			return h(UBadge, { class: "capitalize", variant: "subtle", color: is_block ? "error" : "success" }, () =>
 				is_block ? "Заблокирован" : "Активен"
 			);
+		},
+	},
+	{
+		id: "actions",
+		header: "Действия",
+		meta: {
+			class: { td: "w-36" },
+		},
+		cell: ({ row }) => {
+			return h(UButton, {
+				label: "Редактировать",
+				size: "sm",
+				variant: "outline",
+				color: "neutral",
+				icon: "i-lucide-pencil",
+				onClick: () => {
+					editModalOpen.value = true;
+					selectedLesson.value = row.original;
+				},
+			});
 		},
 	},
 ];

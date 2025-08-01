@@ -1,5 +1,5 @@
 <template>
-	<UModal v-if="lesson" v-model:open="open" :title="title" :ui="{ footer: 'justify-end gap-4' }">
+	<UModal v-if="lesson" v-model:open="open" title="Урок" :ui="{ footer: 'justify-end gap-4' }">
 		<template #body>
 			<div class="grid grid-cols-2 gap-4">
 				<div v-for="word in lesson.words" :key="word.id">
@@ -58,11 +58,6 @@ const emit = defineEmits(["update:modelValue", "close", "refetch"]);
 const open = computed({
 	get: () => props.modelValue,
 	set: value => emit("update:modelValue", value),
-});
-
-const title = computed(() => {
-	// return props.lesson.words.map(word => word.title.trim()).join("/");
-	return "Урок";
 });
 
 const handleResult = () => {
