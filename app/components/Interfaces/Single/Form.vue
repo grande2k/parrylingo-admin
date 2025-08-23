@@ -271,9 +271,9 @@
 						/>
 					</UFormField>
 
-					<UFormField label="Заголовок текста" name="interface.footer_title">
+					<UFormField label="Статья: текст № 1" name="interface.article_1">
 						<UTextarea
-							v-model="state.interface.footer_title"
+							v-model="state.interface.article_1"
 							autoresize
 							size="2xl"
 							placeholder="Введите значение"
@@ -281,9 +281,76 @@
 						/>
 					</UFormField>
 
-					<UFormField label="Текст" name="interface.footer_text">
+					<UFormField label="Статья: текст № 2" name="interface.article_2">
 						<UTextarea
-							v-model="state.interface.footer_text"
+							v-model="state.interface.article_2"
+							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Статья: текст № 3" name="interface.article_3">
+						<UTextarea
+							v-model="state.interface.article_3"
+							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 1: заголовок" name="interface.slide_1_title">
+						<UInput
+							v-model="state.interface.slide_1_title"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 1: текст" name="interface.slide_1_text">
+						<UTextarea
+							v-model="state.interface.slide_1_text"
+							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 2: заголовок" name="interface.slide_2_title">
+						<UInput
+							v-model="state.interface.slide_2_title"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 2: текст" name="interface.slide_2_text">
+						<UTextarea
+							v-model="state.interface.slide_2_text"
+							autoresize
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 3: заголовок" name="interface.slide_3_title">
+						<UInput
+							v-model="state.interface.slide_3_title"
+							size="2xl"
+							placeholder="Введите значение"
+							class="w-full"
+						/>
+					</UFormField>
+
+					<UFormField label="Слайд № 3: текст" name="interface.slide_3_text">
+						<UTextarea
+							v-model="state.interface.slide_3_text"
 							autoresize
 							size="2xl"
 							placeholder="Введите значение"
@@ -596,8 +663,15 @@ const state = reactive({
 		timer: "",
 		search: "",
 		interface_languages: "",
-		footer_title: "",
-		footer_text: "",
+		article_1: "",
+		article_2: "",
+		article_3: "",
+		slide_1_title: "",
+		slide_1_text: "",
+		slide_2_title: "",
+		slide_2_text: "",
+		slide_3_title: "",
+		slide_3_text: "",
 		show_more: "",
 		show_less: "",
 		appstore_button: "",
